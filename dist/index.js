@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.updateUser = exports.preCreateUser = exports.getUserById = exports.updateAppointment = exports.preCreateAppointment = exports.getAppointmentById = void 0;
+const getAppointmentByUser_1 = require("./appointmentHandlers/getAppointmentByUser");
+const preCreateAppointmentHandler_1 = require("./appointmentHandlers/preCreateAppointmentHandler");
+const updateAppointmentHandler_1 = require("./appointmentHandlers/updateAppointmentHandler");
+const getUserByIdHandler_1 = require("./userHandlers/getUserByIdHandler");
+const preCreateUserHandler_1 = require("./userHandlers/preCreateUserHandler");
+const updateUserHandler_1 = require("./userHandlers/updateUserHandler");
+exports.getAppointmentById = getAppointmentByUser_1.getAppointmentByIdHandler;
+exports.preCreateAppointment = preCreateAppointmentHandler_1.preCreateAppointmentHandler;
+exports.updateAppointment = updateAppointmentHandler_1.updateAppointmentHandler;
+exports.getUserById = getUserByIdHandler_1.getUserByIdHandler;
+exports.preCreateUser = preCreateUserHandler_1.preCreateUserHandler;
+exports.updateUser = updateUserHandler_1.updateUserHandler;
