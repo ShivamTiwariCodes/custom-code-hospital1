@@ -6,8 +6,13 @@ const preCreateUserHandler = (customArgs) => {
         const { id, args, userServiceFactory } = customArgs;
         const userService = userServiceFactory.getInstance();
         const { user } = args;
-        const createdUser = userService.createUser(user);
-        resolve(createdUser);
+        userService.createUser(user)
+            .then(createdUser => {
+            resolve(createdUser);
+        })
+            .catch(err => {
+            reject(err);
+        });
     });
 };
 exports.preCreateUserHandler = preCreateUserHandler;
