@@ -7,13 +7,13 @@ export const preCreateUserHandler = (customArgs: CustomArgs<any>): Promise<any> 
         const userService = userServiceFactory.getInstance();
         const { user } = args;
 
-        userService.createUser(user)
-        .then(createdUser => {
-            resolve(createdUser);
-        })
-        .catch(err => {
-            reject(err);
-        })
+        resolve(userService.createUser(user))
+        // .then(createdUser => {
+        //     resolve(createdUser);
+        // })
+        // .catch(err => {
+        //     reject(err);
+        // })
 
     });
 } 
